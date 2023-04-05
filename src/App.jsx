@@ -5,6 +5,7 @@ import { Datablify } from 'datablify'
 import './App.css'
 import Nav from './Components/Nav/Nav.jsx'
 import Header from './Components/Header/Header.jsx'
+import Footer from './Components/Footer/Footer.jsx'
 
 function App() {
   // console.log(Datablify)
@@ -554,6 +555,7 @@ function App() {
     <Header />
     <Nav />
     <Routing />
+    <Footer />
     </BrowserRouter>
   )
 }

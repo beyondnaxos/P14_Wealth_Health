@@ -1,0 +1,19 @@
+.footer {
+    background-color: #202030;
+    height: 100px;
+    /* justify to bottom */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+    position: fixed;
+    bottom: 0;
+    color: white;
+    width: 100%;
+    padding: 20px;
+}
+
+.whiteLogo {
+   height: 40px;
+}
+

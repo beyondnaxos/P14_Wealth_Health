@@ -1,0 +1,98 @@
+.formContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+.form {
+    display: flex;
+    column-gap: 10px;
+}
+
+.bar {
+    color: #93AD18;
+}
+.groupTitle {
+    text-align: start;
+    color: #202030;
+}
+
+.sideSquare {
+    width : 90px;
+    height: 90%;
+    background-color: #93AD18;
+   margin: 20px;
+}
+.userFormContainer, .addressFormContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    width: 50%;
+}
+
+.userFormContainer {
+    padding: 20px;
+}
+
+.addressFormContainer {
+    padding: 20px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.label {
+ text-align: left;
+ font-size: 15px;
+ color: #202030;
+ line-height: 17px;
+ font-weight: 500;
+}
+
+.input {
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-top: 5px;
+    /* sobre inner shadow */
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.button {
+    padding: 12px;
+    color: white;
+    border : none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 19px;
+    background-color: #202030;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 580px) {
+
+    .formContainer {
+        margin-top: 0;
+    }
+
+    .form {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .userFormContainer, .addressFormContainer {
+        width: 100%;
+        max-width: 400px;
+
+    }
+
+
+    .sideSquare {
+      display: none;
+    }
+}
