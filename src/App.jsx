@@ -7,11 +7,12 @@ import Nav from './Components/Nav/Nav.jsx'
 import Header from './Components/Header/Header.jsx'
 import Footer from './Components/Footer/Footer.jsx'
 import { createContext, useState } from 'react'
+import * as mockData from './mock/mockedData.json'
 
 const usersInfosContext = createContext()
 
 function App() {
-  let [usersInfos, setUsersInfos] = useState([])
+  let [usersInfos, setUsersInfos] = useState(mockData.default)
 
   return (
     <BrowserRouter>

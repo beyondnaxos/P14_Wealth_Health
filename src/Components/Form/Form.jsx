@@ -9,12 +9,13 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log("xouxouxouxoxu")
     const formData = new FormData(e.target)
     const data = Object.fromEntries(formData.entries())
     setUsersInfos([...usersInfos, data])
     console.log(data)
   }
+
+
 
   return (
     <div className={styles.formContainer} onSubmit={(e) => handleSubmit(e)}>
