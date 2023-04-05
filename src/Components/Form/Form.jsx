@@ -1,14 +1,18 @@
 import React from 'react'
 import styles from './Form.module.css'
 import * as state from '../../assets/states.json'
+import { useContext } from 'react'
+import { usersInfosContext } from '../../App.jsx'
 
 const Form = () => {
-  console.log(state.default)
+  const { usersInfos, setUsersInfos } = useContext(usersInfosContext)
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    console.log("xouxouxouxoxu")
     const formData = new FormData(e.target)
     const data = Object.fromEntries(formData.entries())
+    setUsersInfos([...usersInfos, data])
     console.log(data)
   }
 
@@ -17,15 +21,15 @@ const Form = () => {
       <form className={styles.form}>
         <div className={styles.sideSquare}></div>
         <div className={styles.userFormContainer}>
-          <h2 className={styles.groupTitle}><span className={styles.bar}>|</span> Infos</h2>
+          <h2 className={styles.groupTitle}>
+            <span className={styles.bar}>|</span> Infos
+          </h2>
           <div className={styles.formGroup}>
             <label className={styles.label} htmlFor="first-name">
               First Name
             </label>
             <input
               className={styles.input}
-              // pattern="[a-zA-Z]"
-              // pattern doesnt work
               pattern="^[a-zA-Z]+$"
               required
               title="Please enter a valid name"
@@ -90,7 +94,9 @@ const Form = () => {
           </div>
         </div>
         <div className={styles.addressFormContainer}>
-          <h2 className={styles.groupTitle}><span className={styles.bar}>|</span> Address</h2>
+          <h2 className={styles.groupTitle}>
+            <span className={styles.bar}>|</span> Address
+          </h2>
           <div className={styles.formGroup}>
             <label className={styles.label} htmlFor="street">
               Street
@@ -114,9 +120,9 @@ const Form = () => {
               type="text"
               id="city"
               name="city"
-              pattern="^[0-9]{5}$"
+              pattern="^[a-zA-Z0-9\s,]+$"
               required
-              title="Please enter a valid zip code"
+              title="Please enter a valid city "
             />
           </div>
           <div className={styles.formGroup}>
