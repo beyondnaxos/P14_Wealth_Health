@@ -1,0 +1,22 @@
+.navigation {
+display: flex;
+justify-content: center;
+/* background-color: #5B6F0A; */
+background-color: #93AD18;
+height: 80px;
+align-items: center;
+}
+
+.listContainer {
+
+    display: flex;
+    column-gap: 20px;
+    font-size: large;
+}
+
+.link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+}

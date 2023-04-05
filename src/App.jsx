@@ -4,6 +4,7 @@ import Routing from './Routing/Routing.jsx'
 import { Datablify } from 'datablify'
 import './App.css'
 import Nav from './Components/Nav/Nav.jsx'
+import Header from './Components/Header/Header.jsx'
 
 function App() {
   // console.log(Datablify)
@@ -550,6 +551,7 @@ function App() {
   // return <Datablify data={data} categories={categories} />
   return (
     <BrowserRouter>
+    <Header />
     <Nav />
     <Routing />
     </BrowserRouter>
