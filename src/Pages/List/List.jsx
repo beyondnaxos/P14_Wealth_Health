@@ -21,7 +21,12 @@ const List = () => {
 
   return usersInfos.length > 0 ? (
     <div className={styles.datablifyContainer}>
-      <Datablify data={usersInfos} categories={categories} />
+      <Datablify
+        data={usersInfos}
+        categories={categories}
+        headColor={'black'}
+        titleHeadColor={'white'}
+      />
     </div>
   ) : null
 }
