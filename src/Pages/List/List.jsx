@@ -24,8 +24,8 @@ const List = () => {
       <Datablify
         data={usersInfos}
         categories={categories}
-        headColor={'black'}
-        titleHeadColor={'white'}
+        // headColor={'green'}
+        // titleHeadColor={'black'}
       />
     </div>
   ) : null
