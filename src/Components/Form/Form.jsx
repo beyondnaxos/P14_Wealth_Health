@@ -15,8 +15,6 @@ const Form = () => {
     console.log(data)
   }
 
-
-
   return (
     <div className={styles.formContainer} onSubmit={(e) => handleSubmit(e)}>
       <form className={styles.form}>
