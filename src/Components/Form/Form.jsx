@@ -4,6 +4,17 @@ import * as state from '../../assets/states.json'
 import { useContext } from 'react'
 import { usersInfosContext } from '../../App.jsx'
 
+
+/**
+ * This is a React component that renders a form with input fields for user information and address,
+ * and submits the data to a context state.
+ * @returns A React functional component called `Form` is being returned. It renders a form with input
+ * fields for user information such as first name, last name, date of birth, start date, department,
+ * street, city, state, and zip code. The form also includes a submit button. When the form is
+ * submitted, the data is collected and added to the `usersInfos` state using the `set
+ */
+
+
 const Form = () => {
   const { usersInfos, setUsersInfos } = useContext(usersInfosContext)
 
