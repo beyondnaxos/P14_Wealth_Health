@@ -3,7 +3,8 @@ import styles from './Form.module.css'
 import * as state from '../../assets/states.json'
 import { useContext } from 'react'
 import { usersInfosContext } from '../../App.jsx'
-
+import Modal from '../../Modal/Modal'
+import { useState } from 'react'
 
 /**
  * This is a React component that renders a form with input fields for user information and address,
@@ -14,8 +15,8 @@ import { usersInfosContext } from '../../App.jsx'
  * submitted, the data is collected and added to the `usersInfos` state using the `set
  */
 
-
 const Form = () => {
+  const [sent, setSent] = useState(false)
   const { usersInfos, setUsersInfos } = useContext(usersInfosContext)
 
   const handleSubmit = (e) => {
@@ -23,7 +24,11 @@ const Form = () => {
     const formData = new FormData(e.target)
     const data = Object.fromEntries(formData.entries())
     setUsersInfos([...usersInfos, data])
-    console.log(data)
+    setSent(true)
+    setTimeout(() => {
+      setSent(false)
+    }, 3000)
+    e.target.reset()
   }
 
   return (
@@ -172,6 +177,8 @@ const Form = () => {
           </div>
         </div>
       </form>
+            {sent ? <div className={styles.modalContainer}><Modal /></div> : null}
+          
     </div>
   )
 }

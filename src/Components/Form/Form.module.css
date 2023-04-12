@@ -73,6 +73,22 @@
     cursor: pointer;
 }
 
+.modalContainer {
+   position: absolute;
+    background-color: #93AD18;
+    height: 150px;
+    width: 300px;
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    /* box shadow large */
+    box-shadow: 0 0 100px rgba(20, 20, 20, 0.7);
+}
+
+
+
 @media screen and (max-width: 580px) {
 
     .formContainer {

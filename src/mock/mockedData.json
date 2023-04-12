@@ -116,5 +116,148 @@
     "city": "Miami",
     "state": "FL",
     "zipCode": "33101"
+  },
+
+  {
+    "firstName": "Carter",
+    "lastName": "Martinez",
+    "dateOfBirth": "06-20-1996",
+    "startDate": "2020-01-01",
+    "department": "Legal",
+    "street": "987 Elm St",
+    "city": "Dallas",
+    "state": "TX",
+    "zipCode": "75201"
+  },
+  {
+    "firstName": "Patrick",
+    "lastName": "Bouboulina",
+    "dateOfBirth": "01-01-1992",
+    "startDate": "2022-01-01",
+    "department": "Info",
+    "street": "155 jump street",
+    "city": "Kansas City",
+    "state": "AR",
+    "zipCode": "45650"
+  },
+  {
+    "firstName": "Emma",
+    "lastName": "Smith",
+    "dateOfBirth": "08-12-1995",
+    "startDate": "2021-09-01",
+    "department": "Marketing",
+    "street": "123 Main St",
+    "city": "Chicago",
+    "state": "IL",
+    "zipCode": "60601"
+  },
+
+  {
+    "firstName": "John",
+    "lastName": "Doe",
+    "dateOfBirth": "05-06-1985",
+    "startDate": "2020-05-15",
+    "department": "Finance",
+    "street": "789 High St",
+    "city": "New York",
+    "state": "NY",
+    "zipCode": "10001"
+  },
+
+  {
+    "firstName": "Ava",
+    "lastName": "Garcia",
+    "dateOfBirth": "02-28-1998",
+    "startDate": "2023-06-01",
+    "department": "Human Resources",
+    "street": "456 Elm St",
+    "city": "Los Angeles",
+    "state": "CA",
+    "zipCode": "90001"
+  },
+
+  {
+    "firstName": "Roby",
+    "lastName": "Salbino",
+    "dateOfBirth": "11-10-1990",
+    "startDate": "2022-03-01",
+    "department": "Sales",
+    "street": "789 Oak St",
+    "city": "San Francisco",
+    "state": "CA",
+    "zipCode": "94101"
+  },
+
+  {
+    "firstName": "Salomé",
+    "lastName": "Bona",
+    "dateOfBirth": "09-18-1993",
+    "startDate": "2021-01-01",
+    "department": "Operations",
+    "street": "987 Maple St",
+    "city": "Seattle",
+    "state": "WA",
+    "zipCode": "98101"
+  },
+
+  {
+    "firstName": "George",
+    "lastName": "Suivant",
+    "dateOfBirth": "03-22-1988",
+    "startDate": "2020-02-15",
+    "department": "Engineering",
+    "street": "456 Pine St",
+    "city": "Boston",
+    "state": "MA",
+    "zipCode": "02108"
+  },
+
+  {
+    "firstName": "Sophia",
+    "lastName": "Nouktala",
+    "dateOfBirth": "07-14-1997",
+    "startDate": "2023-01-01",
+    "department": "Research and Development",
+    "street": "654 Cedar St",
+    "city": "Austin",
+    "state": "TX",
+    "zipCode": "78701"
+  },
+
+  {
+    "firstName": "Jp",
+    "lastName": "Belou",
+    "dateOfBirth": "04-30-1994",
+    "startDate": "2022-02-01",
+    "department": "Customer Service",
+    "street": "321 Walnut St",
+    "city": "Denver",
+    "state": "CO",
+    "zipCode": "80202"
+  },
+
+  {
+    "firstName": "Frederica",
+    "lastName": "Vanette",
+    "dateOfBirth": "12-08-1989",
+    "startDate": "2021-06-01",
+    "department": "Information Technology",
+    "street": "753 Oak St",
+    "city": "Miami",
+    "state": "FL",
+    "zipCode": "33101"
+  },
+
+  {
+    "firstName": "Peter",
+    "lastName": "Parker",
+    "dateOfBirth": "06-20-1996",
+    "startDate": "2020-01-01",
+    "department": "Legal",
+    "street": "987 Elm St",
+    "city": "Dallas",
+    "state": "TX",
+    "zipCode": "75201"
   }
+
 ]
