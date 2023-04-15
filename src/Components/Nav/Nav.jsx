@@ -17,10 +17,10 @@ const Nav = () => {
       <ul className={styles.listContainer}>
         <li>
           { location.pathname === '/list' ? 
-          <Link className={styles.link} to="/">
+          <Link className={styles.link} data-testid='navigation-link' to="/">
             Go to form
           </Link> : 
-          <Link className={styles.link} to="/list">
+          <Link className={styles.link} data-testid='navigation-link' to="/list">
             View Current Employees
           </Link>
           }
