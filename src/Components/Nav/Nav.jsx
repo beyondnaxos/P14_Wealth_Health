@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import styles from './Nav.module.css'
 
 /**
@@ -9,13 +9,21 @@ import styles from './Nav.module.css'
  */
 
 const Nav = () => {
+
+  const location = useLocation()
+
   return (
     <nav className={styles.navigation}>
       <ul className={styles.listContainer}>
         <li>
+          { location.pathname === '/list' ? 
+          <Link className={styles.link} to="/">
+            Go to form
+          </Link> : 
           <Link className={styles.link} to="/list">
             View Current Employees
           </Link>
+          }
         </li>
       </ul>
     </nav>
