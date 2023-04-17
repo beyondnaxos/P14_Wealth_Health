@@ -99,12 +99,12 @@ const Form = () => {
             <label className={styles.label} htmlFor="department">
               Department
             </label>
-            <select className={styles.input} id="department" name="department">
-              <option value="sales">Sales</option>
-              <option value="marketing">Marketing</option>
-              <option value="engineering">Engineering</option>
-              <option value="human-resources">Human Resources</option>
-              <option value="accounting">Accounting</option>
+            <select data-testid="select" className={styles.input} id="department" name="department">
+              <option data-testid="select-option" value="sales">Sales</option>
+              <option data-testid="select-option" value="marketing">Marketing</option>
+              <option data-testid="select-option" value="engineering">Engineering</option>
+              <option data-testid="select-option" value="human-resources">Human Resources</option>
+              <option data-testid="select-option" value="accounting">Accounting</option>
             </select>
           </div>
         </div>
@@ -149,10 +149,11 @@ const Form = () => {
               type="text"
               id="state"
               name="state"
+              data-testid="state-select"
             >
               {state.default.map((state, index) => {
                 return (
-                  <option key={index} value={state.abbreviation}>
+                  <option key={index} value={state.abbreviation} data-testid="state-select-option">
                     {state.name}
                   </option>
                 )
@@ -171,7 +172,7 @@ const Form = () => {
             />
           </div>
           <div className={styles.formGroup}>
-            <button className={styles.button} type="submit">
+            <button data-testid='button' className={styles.button} type="submit">
               Submit
             </button>
           </div>
