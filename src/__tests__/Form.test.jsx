@@ -7,11 +7,10 @@ import mockData from '../mock/mockedData.json'
 import { usersInfosContext } from '../App'
 
 describe('Form', () => {
-
   const setUsersInfos = vi.fn()
 
   const usersInfos = mockData.default
-  
+
   beforeEach(() => {
     render(
       <usersInfosContext.Provider value={{ usersInfos, setUsersInfos }}>
@@ -19,11 +18,11 @@ describe('Form', () => {
       </usersInfosContext.Provider>
     )
   })
-  
+
   it('should be called ', () => {
     setUsersInfos(mockData.default)
     expect(setUsersInfos).toHaveBeenCalled()
-  }) 
+  })
 
   it('should render all form input fields', () => {
     expect(screen.getByLabelText('First Name')).toBeInTheDocument()
@@ -38,7 +37,6 @@ describe('Form', () => {
   })
 
   it('should submit the form with all required fields', () => {
-
     const submitButton = screen.getByText('Submit')
 
     const firstNameInput = screen.getByLabelText('First Name')
@@ -61,32 +59,25 @@ describe('Form', () => {
     fireEvent.change(stateInput, { target: { value: 1 } })
     fireEvent.change(zipCodeInput, { target: { value: '10001' } })
 
-
     const options = screen.getAllByRole('option')
     const stateSelectOption = stateInput.children[1]
 
-
-
     fireEvent.click(submitButton)
 
-    
     expect(firstNameInput.value).toBe('John')
     expect(lastNameInput.value).toBe('Doe')
     expect(dateOfBirthInput.value).toBe('2000-01-01')
     expect(startDateInput.value).toBe('2020-01-01')
-    expect(options[1].value).toBe('marketing');
+    expect(options[1].value).toBe('marketing')
     expect(streetInput.value).toBe('123 Main St')
     // expect(cityInput.value).toBe('New York')
     expect(stateSelectOption.value).toBe('AK')
     expect(zipCodeInput.value).toBe('10001')
-    
-
   })
 
-  it("should display modal when form is submitted", () => {})
+  it('should display modal when form is submitted', () => {})
 
   it('should not submit the form with missing required fields', () => {
-
     const submitButton = screen.getByText('Submit')
 
     const firstNameInput = screen.getByLabelText('First Name')
@@ -109,24 +100,19 @@ describe('Form', () => {
     fireEvent.change(stateInput, { target: { value: 1 } })
     fireEvent.change(zipCodeInput, { target: { value: '' } })
 
-
     const options = screen.getAllByRole('option')
     const stateSelectOption = stateInput.children[1]
 
-
-
     fireEvent.click(submitButton)
-
 
     expect(firstNameInput.value).toBe('John')
     expect(lastNameInput.value).toBe('Doe')
     expect(dateOfBirthInput.value).toBe('2000-01-01')
     expect(startDateInput.value).toBe('2020-01-01')
-    expect(options[1].value).toBe('marketing');
+    expect(options[1].value).toBe('marketing')
     expect(streetInput.value).toBe('123 Main St')
     // expect(cityInput.value).toBe('New York')
     expect(stateSelectOption.value).toBe('AK')
     expect(zipCodeInput.value).toBe('')
-    
   })
 })
