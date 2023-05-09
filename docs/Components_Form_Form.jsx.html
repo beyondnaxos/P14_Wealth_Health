@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: Components/Form/Form.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: Components/Form/Form.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>
+/**
+ * @fileoverview Form component for capturing and submitting user information.
+ */
+
+import React, { useContext, useState } from 'react';
+import styles from './Form.module.css';
+import * as state from '../../assets/states.json';
+import { usersInfosContext } from '../../App.jsx';
+import Modal from '../../Modal/Modal';
+
+/**
+ * @function Form
+ * @returns {React.Element} - The rendered Form component.
+ * @description Form component for capturing and submitting user information, including personal information and address.
+ */
+
+const Form = () => {
+  const [sent, setSent] = useState(false)
+  const { usersInfos, setUsersInfos } = useContext(usersInfosContext)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const formData = new FormData(e.target)
+    const data = Object.fromEntries(formData.entries())
+    setUsersInfos([...usersInfos, data])
+    setSent(true)
+    setTimeout(() => {
+      setSent(false)
+    }, 3000)
+    e.target.reset()
+  }
+
+  return (
+    &lt;div className={styles.formContainer} onSubmit={(e) => handleSubmit(e)}>
+      &lt;form className={styles.form}>
+        &lt;div className={styles.sideSquare}>&lt;/div>
+        &lt;div className={styles.userFormContainer}>
+          &lt;h2 className={styles.groupTitle}>
+            &lt;span className={styles.bar}>|&lt;/span> Infos
+          &lt;/h2>
+          &lt;div className={styles.formGroup}>
+            &lt;label className={styles.label} htmlFor="first-name">
+              First Name
+            &lt;/label>
+            &lt;input
+              className={styles.input}
+              pattern="^[a-zA-Z]+$"
+              required
+              title="Please enter a valid name"
+              type="text"
+              id="first-name"
+              name="first-name"
+            />
+          &lt;/div>
+          &lt;div className={styles.formGroup}>
+            &lt;label className={styles.label} htmlFor="last-name">
+              Last Name
+            &lt;/label>
+            &lt;input
+              className={styles.input}
+              pattern="^[a-zA-Z]+$"
+              required
+              title="Please enter a valid name"
+              type="text"
+              id="last-name"
+              name="last-name"
+            />
+          &lt;/div>
+          &lt;div className={styles.formGroup}>
+            &lt;label className={styles.label} htmlFor="date-of-birth">
+              Date of Birth
+            &lt;/label>
+            &lt;input
+              className={styles.input}
+              type="date"
+              pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/[0-9]{4}$"
+              required
+              title="Please enter a valid date"
+              id="date-of-birth"
+              name="date-of-birth"
+            />
+          &lt;/div>
+          &lt;div className={styles.formGroup}>
+            &lt;label className={styles.label} htmlFor="start-date">
+              Start Date
+            &lt;/label>
+            &lt;input
+              className={styles.input}
+              type="date"
+              pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/[0-9]{4}$"
+              required
+              title="Please enter a valid date"
+              id="start-date"
+              name="start-date"
+            />
+          &lt;/div>
+          &lt;div className={styles.formGroup}>
+            &lt;label className={styles.label} htmlFor="department">
+              Department
+            &lt;/label>
+            &lt;select data-testid="select" className={styles.input} id="department" name="department">
+              &lt;option data-testid="select-option" value="sales">Sales&lt;/option>
+              &lt;option data-testid="select-option" value="marketing">Marketing&lt;/option>
+              &lt;option data-testid="select-option" value="engineering">Engineering&lt;/option>
+              &lt;option data-testid="select-option" value="human-resources">Human Resources&lt;/option>
+              &lt;option data-testid="select-option" value="accounting">Accounting&lt;/option>
+            &lt;/select>
+          &lt;/div>
+        &lt;/div>
+        &lt;div className={styles.addressFormContainer}>
+          &lt;h2 className={styles.groupTitle}>
+            &lt;span className={styles.bar}>|&lt;/span> Address
+          &lt;/h2>
+          &lt;div className={styles.formGroup}>
+            &lt;label className={styles.label} htmlFor="street">
+              Street
+            &lt;/label>
+            &lt;input
+              className={styles.input}
+              pattern="^[a-zA-Z0-9\s,]+$"
+              required
+              title="Please enter a valid address"
+              type="text"
+              id="street"
+              name="street"
+            />
+          &lt;/div>
+          &lt;div className={styles.formGroup}>
+            &lt;label className={styles.label} htmlFor="city">
+              City
+            &lt;/label>
+            &lt;input
+              className={styles.input}
+              type="text"
+              id="city"
+              name="city"
+              pattern="^[a-zA-Z0-9\s,]+$"
+              required
+              title="Please enter a valid city "
+            />
+          &lt;/div>
+          &lt;div className={styles.formGroup}>
+            &lt;label className={styles.label} htmlFor="state">
+              State
+            &lt;/label>
+            &lt;select
+              className={styles.input}
+              type="text"
+              id="state"
+              name="state"
+              data-testid="state-select"
+            >
+              {state.default.map((state, index) => {
+                return (
+                  &lt;option key={index} value={state.abbreviation} data-testid="state-select-option">
+                    {state.name}
+                  &lt;/option>
+                )
+              })}
+            &lt;/select>
+          &lt;/div>
+          &lt;div className={styles.formGroup}>
+            &lt;label className={styles.label} htmlFor="zip-code">
+              Zip Code
+            &lt;/label>
+            &lt;input
+              className={styles.input}
+              type="text"
+              id="zip-code"
+              name="zip-code"
+            />
+          &lt;/div>
+          &lt;div className={styles.formGroup}>
+            &lt;button data-testid='button' className={styles.button} type="submit">
+              Submit
+            &lt;/button>
+          &lt;/div>
+        &lt;/div>
+      &lt;/form>
+            {sent ? &lt;div className={styles.modalContainer}>&lt;Modal />&lt;/div> : null}
+          
+    &lt;/div>
+  )
+}
+
+export default Form
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#Footer">Footer</a></li><li><a href="global.html#Form">Form</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#List">List</a></li><li><a href="global.html#Modal">Modal</a></li><li><a href="global.html#Nav">Nav</a></li><li><a href="global.html#usersInfosContext">usersInfosContext</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a>
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

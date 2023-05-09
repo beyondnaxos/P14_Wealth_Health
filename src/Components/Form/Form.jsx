@@ -1,18 +1,18 @@
-import React from 'react'
-import styles from './Form.module.css'
-import * as state from '../../assets/states.json'
-import { useContext } from 'react'
-import { usersInfosContext } from '../../App.jsx'
-import Modal from '../../Modal/Modal'
-import { useState } from 'react'
 
 /**
- * This is a React component that renders a form with input fields for user information and address,
- * and submits the data to a context state.
- * @returns A React functional component called `Form` is being returned. It renders a form with input
- * fields for user information such as first name, last name, date of birth, start date, department,
- * street, city, state, and zip code. The form also includes a submit button. When the form is
- * submitted, the data is collected and added to the `usersInfos` state using the `set
+ * @fileoverview Form component for capturing and submitting user information.
+ */
+
+import React, { useContext, useState } from 'react';
+import styles from './Form.module.css';
+import * as state from '../../assets/states.json';
+import { usersInfosContext } from '../../App.jsx';
+import Modal from '../../Modal/Modal';
+
+/**
+ * @function Form
+ * @returns {React.Element} - The rendered Form component.
+ * @description Form component for capturing and submitting user information, including personal information and address.
  */
 
 const Form = () => {

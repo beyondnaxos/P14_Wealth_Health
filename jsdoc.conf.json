@@ -1,0 +1,18 @@
+{
+    "source": {
+      "include": ["src"],
+      "includePattern": ".+\\.js(x)?$",
+      "excludePattern": "(node_modules/)"
+    },
+    "opts": {
+      "destination": "docs/",
+      "recurse": true,
+      "verbose": true
+    },
+    "templates": {
+      "default": {
+        "includeDate": false
+      }
+    }
+  }
+  
