@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /public/
+Allow: /docs/
+
+Sitemap: https://p14-wealth-health-git-main-beyondnaxos.vercel.app/
