@@ -36,7 +36,7 @@ To install and use this project, follow the steps below:
 2. Navigate to the project directory.
 3. Run `npm install` to install all necessary dependencies.
 4. Run `npm run dev` to launch the application in development mode.
-5. Open your browser and go to `http://localhost:3000`.
+5. Open your browser and go to `http://localhost:5173/`.
 
 ## Components Documentation
 
