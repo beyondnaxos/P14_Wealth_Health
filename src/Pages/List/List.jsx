@@ -33,7 +33,7 @@ const List = () => {
       <Datablify
         data={usersInfos}
         categories={categories}
-        headColor={'green'}
+        headColor={'white'}
         titleHeadColor={'black'}
       />
     </div>
