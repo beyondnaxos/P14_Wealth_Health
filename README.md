@@ -1,26 +1,26 @@
-# Projet HRnet Conversion en React
+# HRnet Project Conversion to React
 
-Ce projet consiste à convertir l'application HRnet existante, basée sur jQuery, en une application React moderne. L'un des principaux objectifs est d'améliorer les performances en convertissant les plugins jQuery utilisés dans l'application en composants React. Le plugin jQuery choisi pour la conversion est le plugin pour les tables de données.
+This project aims to convert the existing HRnet application, based on jQuery, into a modern React application. One of the main objectives is to improve performance by converting jQuery plugins used in the application into React components. The chosen jQuery plugin for conversion is the data tables plugin.
 
-## Table des matières
+## Table of Contents
 
-- [Caractéristiques principales](#caractéristiques-principales)
-- [Technologies et outils utilisés](#technologies-et-outils-utilisés)
-- [Installation et utilisation](#installation-et-utilisation)
-- [Documentation des composants](#documentation-des-composants)
-- [Tests et performances](#tests-et-performances)
-- [Lien vers le package npm](#lien-vers-le-package-npm)
-- [Auteurs et contributeurs](#auteurs-et-contributeurs)
+- [Main Features](#main-features)
+- [Technologies and Tools Used](#technologies-and-tools-used)
+- [Installation and Usage](#installation-and-usage)
+- [Components Documentation](#components-documentation)
+- [Tests and Performance](#tests-and-performance)
+- [Link to npm Package](#link-to-npm-package)
+- [Authors and Contributors](#authors-and-contributors)
 
-## Caractéristiques principales
+## Main Features
 
-- Conversion de l'ensemble du projet HRNet en React.
-- Conversion du plugin de table de données jQuery en composant React.
-- Utilisation de Context API pour la gestion d'état.
-- Documentation du code avec JSDoc.
-- Tests de performance Lighthouse.
+- Conversion of the entire HRNet project to React.
+- Conversion of the jQuery data tables plugin to a React component.
+- Use of Context API for state management.
+- Code documentation with JSDoc.
+- Lighthouse performance tests.
 
-## Technologies et outils utilisés
+## Technologies and Tools Used
 
 - React
 - Context API
@@ -28,30 +28,30 @@ Ce projet consiste à convertir l'application HRnet existante, basée sur jQuery
 - Lighthouse
 - npm
 
-## Installation et utilisation
+## Installation and Usage
 
-Pour installer et utiliser ce projet, suivez les étapes ci-dessous :
+To install and use this project, follow the steps below:
 
-1. Clonez ce dépôt sur votre machine locale.
-2. Accédez au répertoire du projet.
-3. Exécutez `npm install` pour installer toutes les dépendances nécessaires.
-4. Exécutez `npm start` pour lancer l'application en mode développement.
-5. Ouvrez votre navigateur et accédez à `http://localhost:3000`.
+1. Clone this repository to your local machine.
+2. Navigate to the project directory.
+3. Run `npm install` to install all necessary dependencies.
+4. Run `npm run dev` to launch the application in development mode.
+5. Open your browser and go to `http://localhost:3000`.
 
-## Documentation des composants
+## Components Documentation
 
-La documentation des composants est disponible dans le répertoire `/docs`. Vous y trouverez des informations détaillées sur l'utilisation et les accessoires de chaque composant.
+The components documentation is available in the `/docs` directory. There, you will find detailed information on the usage and props of each component.
 
-## Tests et performances
+## Tests and Performance
 
-Des tests de performance Lighthouse ont été effectués avant et après la conversion en React. Les rapports de performance sont disponibles dans le répertoire `/performance-reports`.
+Lighthouse performance tests were conducted before and after the conversion to React. Performance reports are available in the `/performance-reports` directory.
 
-## Lien vers le package npm
+## Link to npm Package
 
-Le package npm pour le composant de table de données React converti est disponible ici : [Datablify](https://www.npmjs.com/package/datablify)
+The npm package for the converted React data table component is available here: [Datablify](https://www.npmjs.com/package/datablify)
 
-## Auteurs et contributeurs
+## Authors and Contributors
 
 - [Anthony K.](https://github.com/beyondnaxos)
 
-N'hésitez pas à contribuer à ce projet en soumettant des problèmes ou des demandes d'extraction. Vos commentaires et suggestions sont toujours les bienvenus !
+Feel free to contribute to this project by submitting issues or pull requests. Your feedback and suggestions are always welcome!
