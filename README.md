@@ -2,6 +2,11 @@
 
 This project aims to convert the existing HRnet application, based on jQuery, into a modern React application. One of the main objectives is to improve performance by converting jQuery plugins used in the application into React components. The chosen jQuery plugin for conversion is the data tables plugin.
 
+## Hosting 
+- React project hosted on vercel [here](https://p14-wealth-health.vercel.app/).
+- jQuery project hosted on vercel [here](https://p14jquery.vercel.app/).
+
+
 ## Table of Contents
 
 - [Main Features](#main-features)
