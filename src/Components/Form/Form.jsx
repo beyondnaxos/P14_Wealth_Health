@@ -27,7 +27,7 @@ const Form = () => {
     setSent(true)
     setTimeout(() => {
       setSent(false)
-    }, 3000)
+    }, 2000)
     e.target.reset()
   }
 
