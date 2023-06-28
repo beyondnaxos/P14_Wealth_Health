@@ -1,13 +1,12 @@
-
 /**
  * @fileoverview Form component for capturing and submitting user information.
  */
 
-import React, { useContext, useState } from 'react';
-import styles from './Form.module.css';
-import * as state from '../../assets/states.json';
-import { usersInfosContext } from '../../App.jsx';
-import Modal from '../../Modal/Modal';
+import React, { useContext, useState } from 'react'
+import styles from './Form.module.css'
+import * as state from '../../assets/states.json'
+import { usersInfosContext } from '../../App.jsx'
+import Modal from '../../Modal/Modal'
 
 /**
  * @function Form
@@ -99,12 +98,27 @@ const Form = () => {
             <label className={styles.label} htmlFor="department">
               Department
             </label>
-            <select data-testid="select" className={styles.input} id="department" name="department">
-              <option data-testid="select-option" value="sales">Sales</option>
-              <option data-testid="select-option" value="marketing">Marketing</option>
-              <option data-testid="select-option" value="engineering">Engineering</option>
-              <option data-testid="select-option" value="human-resources">Human Resources</option>
-              <option data-testid="select-option" value="accounting">Accounting</option>
+            <select
+              data-testid="select"
+              className={styles.input}
+              id="department"
+              name="department"
+            >
+              <option data-testid="select-option" value="sales">
+                Sales
+              </option>
+              <option data-testid="select-option" value="marketing">
+                Marketing
+              </option>
+              <option data-testid="select-option" value="engineering">
+                Engineering
+              </option>
+              <option data-testid="select-option" value="human-resources">
+                Human Resources
+              </option>
+              <option data-testid="select-option" value="accounting">
+                Accounting
+              </option>
             </select>
           </div>
         </div>
@@ -153,7 +167,11 @@ const Form = () => {
             >
               {state.default.map((state, index) => {
                 return (
-                  <option key={index} value={state.abbreviation} data-testid="state-select-option">
+                  <option
+                    key={index}
+                    value={state.abbreviation}
+                    data-testid="state-select-option"
+                  >
                     {state.name}
                   </option>
                 )
@@ -172,14 +190,21 @@ const Form = () => {
             />
           </div>
           <div className={styles.formGroup}>
-            <button data-testid='button' className={styles.button} type="submit">
+            <button
+              data-testid="button"
+              className={styles.button}
+              type="submit"
+            >
               Submit
             </button>
           </div>
         </div>
       </form>
-            {sent ? <div className={styles.modalContainer}><Modal /></div> : null}
-          
+      {sent ? (
+        <div className={styles.modalContainer}>
+          <Modal />
+        </div>
+      ) : null}
     </div>
   )
 }
