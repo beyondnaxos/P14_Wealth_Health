@@ -21,6 +21,7 @@ import * as mockData from './mock/mockedData.json'
 /**
  * @type {React.Context<UsersInfosContext>}
  */
+
 const usersInfosContext = createContext()
 
 function App() {
